@@ -18,7 +18,7 @@ def before_sort_after_merge(left, right):
     index_r = 0
     while index_l < len(left) and index_r < len(right):
         if left[index_l] < right[index_r]:
-            word.append(left[index_l]) 
+            word.append(left[index_l])
             index_l += 1
         else:
             word.append(right[index_r])
@@ -40,10 +40,8 @@ def is_anagram(first_string, second_string):
     second_string = second_string.casefold()
     first_str_spread = join_sorted_string(first_string)
     second_str_spread = join_sorted_string(second_string)
-    #se alguma das strings estiver vazia, retorna False
     if not first_string or not second_string:
         return (first_str_spread, second_str_spread, False)
-    #comparando o tamanho das duas strings para verificar se ambas possuem o mesmo comprimento
     if len(first_string) != len(second_string):
         return (first_str_spread, second_str_spread, False)
     if first_str_spread == second_str_spread:
